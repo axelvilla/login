@@ -1,16 +1,17 @@
-.register{
-    text-align: center;
+body{
+    min-height: 200px;
 }
 
-.title{
-    font-size: 20px;
-}
-
-.box{
+.container{
+    background:url("assets/Fondo\ 11.png");
     
-    margin-bottom: .5rem;
 }
 
+.caja{
+     
+    background-color: antiquewhite;
+    width: 200px;
+}
 
 
 
