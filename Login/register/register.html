@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="register.module.css">
 </head>
 <body>
-    
-    <p> Registro </p>
 
+    <div class="container">
+
+        <h2>Regístrarse</h2>
+
+        <form id="registerForm">
+            <input type="text" name="nombre" placeholder="Nombre de usuario" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" required>
+
+            <button type="submit" class="btn-primary">Registrarse</button>
+        </form>
+
+        <hr>
+
+        <button class="btn-secondary">
+            <i class="fa-brands fa-google"></i> Registrarse con Google
+        </button>
+
+        <button class="btn-secondary">
+            <i class="fa-brands fa-facebook"></i> Registrarse con Facebook
+        </button>
+
+    </div>
+<script src "../scripts.js"></script>
 </body>
 </html>
