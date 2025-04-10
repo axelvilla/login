@@ -1,8 +1,8 @@
 body{
 
-    height: 70vh;
+    height:100%;
 
-    padding-top: 190px;
+    padding-top: 150px;
 
     background: url("assets/Fondo\ 11.png");
     background-size: cover;
@@ -13,20 +13,18 @@ body{
 
 
 .container{
-
-    height: 350px;
-    
-    padding-left: 455px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
 
 .caja{
 
-    height: 350px;
-    width: 600px;
 
-    position: relative;
+    height: 400px;
+    width: 600px;
 
     border-radius: 15px;
 
@@ -37,28 +35,34 @@ body{
 
     text-align: center;
 
+
     p {
     
         font-size: 30px;
         font-family: "PT Sans Narrow";
-        font-weight: 700;
+        font-weight: 400;
 
     }
    
     a {
 
-        font-size: 25px;
-        font-family: "Gupter";
-        font-weight: 500;
+        font-size: 23px;
+        font-family: "PT Sans Narrow";
+        font-weight: bold;
         color:white;
 
         text-decoration: none;
 
-        padding: 8px;
+        padding: 10px 70px 10px 70px;
 
-        border-radius: 15px;
+        border-radius: 25px;
 
-        background-color: #8864B4;
+        background-color: #6f4aa0;
+
+    }
+
+    a:hover{
+        background-color: #865bbe;
     }
 
     img {

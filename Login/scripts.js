@@ -21,7 +21,7 @@ if (registerForm) {
     const user = {nombre, email, password};
     localStorage.setItem('user',JSON.stringify(user));
     alert ('Registro exitoso');
-    window.location.href = 'login.html';
+    window.location.href = '../login/login.html';
   });
 }
 
