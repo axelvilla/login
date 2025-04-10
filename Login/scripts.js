@@ -7,10 +7,11 @@ if (registerForm) {
     event.preventDefault();
 
     const nombre = registerForm.nombre.value;
+    const apellido = registerForm.apellido.value;
     const email = registerForm.email.value;
     const password = registerForm.password.value;
     const confirmPassword = registerForm.confirmPassword.value;
-    if (!nombre || !email || !password || !confirmPassword){
+    if (!nombre || !apellido || !email || !password || !confirmPassword){
       alert ('COMPLETA TODOS LOS CAMPOS!!!');
       return;
     }
