@@ -1,0 +1,145 @@
+body{
+
+    height: 70vh;
+    padding-top: 100px;
+
+    background: url("../assets/Fondo\ 11.png");
+
+}
+
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.caja{
+
+    height: 430px;
+    width: 500px;
+
+    position: relative;
+
+    border-radius: 15px;
+
+    background-color:rgb(255, 255, 255);
+
+    text-align: center;
+
+
+    h2 {
+    
+        font-size: 30px;
+        font-family: "PT Sans Narrow";
+        font-weight: 700;
+
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 45px;
+
+    }
+   
+
+    input {
+
+        height: 30px;
+        width: 400px;
+
+        border: 1px solid #B3B3B3;
+        color:#B3B3B3;
+
+        font-family: "Gupter";
+        font-weight: 500;
+        font-size: 15px;
+        
+        border-radius: 5px;
+
+        padding-left: 10px;
+
+        margin-top: -10px;
+        
+    }
+
+
+    button {
+
+        border-radius: 15px;
+
+        font-family: "PT Sans Narrow";
+        font-weight: 500;
+        font-size: 15px;
+
+        padding: 5px;
+
+    }
+
+
+    button:nth-of-type(1){
+
+        height: 30px;
+        width: 200px;
+
+        border: 1px solid #8864B4;
+        background-color: #8864B4;
+        color: white;
+
+    }
+
+
+    button:nth-of-type(2), 
+    button:nth-of-type(3) {
+        
+        height: 35px;
+        width: 400px;
+
+        border: 2px solid #B3B3B3;
+        background-color: white;
+        color: #B3B3B3;
+
+        margin-top: -10px;
+    }
+
+
+    input[type="checkbox"] {
+
+        height: 15px;
+        width: 15px;
+
+        accent-color: #8864B4;
+
+        font-family: "PT Sans Narrow";
+        font-size: 15px;
+        font-weight: 400;
+        color:#8864B4;
+
+        justify-content: center;
+
+    }
+
+
+    a {
+
+        height: 10;
+
+        font-size: 15px;
+        font-family: "PT Sans Narrow";
+        font-weight: 400;
+        color: #8864B4;
+
+        text-decoration: none;
+
+        padding-left: 190px;
+
+    }
+
+
+    hr {
+
+        border: 1px solid #B3B3B3;
+    }
+
+}

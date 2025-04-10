@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <H1>
-        LOGIN
-    </H1>
-    <input type="email" placeholder="example@gmail.com">
-    <input type="password" placeholder="Contraseña">
-    <button>Sign in</button>
-    <button>Cancel</button>
-    
+    <link rel="stylesheet" href="login.module.css">
+    <title>Login</title>    
 
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="caja">
+
+            <h2>
+                Inicia sesión
+            </H2>
+
+            <input type="email" placeholder="Correo electrónico"> <br>
+            <br>
+            <input type="password" placeholder="Contraseña"> <br>
+            <br>
+            <button>Iniciar Sesión</button> <br>
+            
+            <br>
+            <input type="checkbox"> 
+            Recordarme
+            <a href=""> ¿Olvidaste tu contraseña?</a> <br> 
+
+            <br>
+
+            <hr width="70%">
+
+            <br>
+            <button disabled> <img src="../assets/google.png" width="1"> Iniciar sesión con Google </button> <br>
+            <br>
+            <button disabled> <img src="../assets/facebook.png" width="1"> Iniciar sesión con Facebook</button>
+            
+        </div>
+
+    </div>
 
 </body>
+<script src="../scripts.js"></script>
+
 </html>

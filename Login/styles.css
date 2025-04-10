@@ -1,17 +1,74 @@
 body{
-    min-height: 200px;
+
+    height:100%;
+
+    padding-top: 150px;
+
+    background: url("assets/Fondo\ 11.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
 }
 
+
 .container{
-    background:url("assets/Fondo\ 11.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
+
 .caja{
-     
-    background-color: antiquewhite;
-    width: 200px;
+
+
+    height: 400px;
+    width: 600px;
+
+    border-radius: 15px;
+
+    background-color:rgb(255, 255, 255);
+    opacity: 0.7;
+
+    overflow: visible;
+
+    text-align: center;
+
+
+    p {
+    
+        font-size: 30px;
+        font-family: "PT Sans Narrow";
+        font-weight: 400;
+
+    }
+   
+    a {
+
+        font-size: 23px;
+        font-family: "PT Sans Narrow";
+        font-weight: bold;
+        color:white;
+
+        text-decoration: none;
+
+        padding: 10px 70px 10px 70px;
+
+        border-radius: 25px;
+
+        background-color: #6f4aa0;
+
+    }
+
+    a:hover{
+        background-color: #865bbe;
+    }
+
+    img {
+
+        margin-top: -50px;
+    }
+
 }
-
-
 
