@@ -1,121 +1,62 @@
+document.addEventListener('DOMContentLoaded', () =>{
+const registerForm = document.getElementById('registerForm');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const registerButton = document.querySelector('.register button:first-of-type');
-    const cancelButton = document.querySelector('.register button:last-of-type');
-  
-    // REGISTRO
-    if (registerButton) {
-      registerButton.addEventListener('click', () => {
-        const inputs = document.querySelectorAll('.register input');
-        const username = inputs[0].value;
-        const email = inputs[1].value;
-        const password = inputs[2].value;
-  
-        if (!username || !email || !password) {
-          alert('Por favor completá todos los campos');
-          return;
-        }
-  
-        const user = { username, email, password };
-        localStorage.setItem('user', JSON.stringify(user));
-        alert('Registro exitoso');
-        window.location.href = 'login.html';
-      });
+
+if (registerForm) {
+  registerForm.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    const nombre = registerForm.nombre.value;
+    const email = registerForm.email.value;
+    const password = registerForm.password.value;
+    const confirmPassword = registerForm.confirmPassword.value;
+    if (!nombre || !email || !password || !confirmPassword){
+      alert ('COMPLETA TODOS LOS CAMPOS!!!');
+      return;
     }
-  
-    if (cancelButton) {
-      cancelButton.addEventListener('click', () => {
-        document.querySelectorAll('.register input').forEach(input => input.value = '');
-      });
+    if (password !== confirmPassword) {
+      alert('Las contraseñas no coinciden');
+      return;
     }
-  
-    // LOGIN
-    const loginButton = document.querySelector('button:nth-of-type(1)');
-    const loginCancel = document.querySelector('button:nth-of-type(2)');
-  
-    if (loginButton && window.location.pathname.includes('login.html')) {
-      loginButton.addEventListener('click', () => {
-        const emailInput = document.querySelector('input[type="email"]').value;
-        const passwordInput = document.querySelector('input[type="password"]').value;
-  
-        const storedUser = JSON.parse(localStorage.getItem('user'));
-        if (!storedUser) {
-          alert('No hay usuarios registrados');
-          return;
-        }
-  
-        if (storedUser.email === emailInput && storedUser.password === passwordInput) {
-          alert(`Bienvenido, ${storedUser.username}!`);
-        } else {
-          alert('Email o contraseña incorrectos');
-        }
-      });
+    const user = {nombre, email, password};
+    localStorage.setItem('user',JSON.stringify(user));
+    alert ('Registro exitoso');
+    window.location.href = 'login.html';
+  });
+}
+
+if (window.location.pathname.includes('login.html')) {
+  const loginButton = document.querySelector('button:nth-of-type(1)');
+  const cancelButton = document.querySelector('button:nth-of-type(2)');
+
+  loginButton.addEventListener('click', () => {
+    const email = document.querySelector('input[type = "email"]').value;
+    const password = document.querySelector('input[type = "password"]').value;
+
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    if (!storedUser) {
+      alert('No existen usuarios');
+      return;
     }
-  
-    if (loginCancel && window.location.pathname.includes('login.html')) {
-      loginCancel.addEventListener('click', () => {
-        document.querySelectorAll('input').forEach(input => input.value = '');
-      });
+    if (storedUser.email === email && storedUser.password === password) {
+      alert(`Bienvenido, ${storedUser.nombre}`);
+    } else{
+    alert('Usuario o contraseña incorrectos');
     }
   });
-document.addEventListener('DOMContentLoaded', () => {
-    const registerButton = document.querySelector('.register button:first-of-type');
-    const cancelButton = document.querySelector('.register button:last-of-type');
-  
-    // REGISTRO
-    if (registerButton) {
-      registerButton.addEventListener('click', () => {
-        const inputs = document.querySelectorAll('.register input');
-        const username = inputs[0].value;
-        const email = inputs[1].value;
-        const password = inputs[2].value;
-  
-        if (!username || !email || !password) {
-          alert('Por favor completá todos los campos');
-          return;
-        }
-  
-        const user = { username, email, password };
-        localStorage.setItem('user', JSON.stringify(user));
-        alert('Registro exitoso');
-        window.location.href = 'login.html';
-      });
-    }
-  
-    if (cancelButton) {
-      cancelButton.addEventListener('click', () => {
-        document.querySelectorAll('.register input').forEach(input => input.value = '');
-      });
-    }
-  
-    // LOGIN
-    const loginButton = document.querySelector('button:nth-of-type(1)');
-    const loginCancel = document.querySelector('button:nth-of-type(2)');
-  
-    if (loginButton && window.location.pathname.includes('login.html')) {
-      loginButton.addEventListener('click', () => {
-        const emailInput = document.querySelector('input[type="email"]').value;
-        const passwordInput = document.querySelector('input[type="password"]').value;
-  
-        const storedUser = JSON.parse(localStorage.getItem('user'));
-        if (!storedUser) {
-          alert('No hay usuarios registrados');
-          return;
-        }
-  
-        if (storedUser.email === emailInput && storedUser.password === passwordInput) {
-          alert(`Bienvenido, ${storedUser.username}!`);
-        } else {
-          alert('Email o contraseña incorrectos');
-        }
-      });
-    }
-  
-    if (loginCancel && window.location.pathname.includes('login.html')) {
-      loginCancel.addEventListener('click', () => {
-        document.querySelectorAll('input').forEach(input => input.value = '');
-      });
-    }
+  cancelButton.addEventListener('click', ()=> {
+    document.querySelectorAll('input').forEach(input => input.value = '');
   });
+}
+});
+ 
+const socialButtons = document.querySelectorAll('.btn-secondary');
+
+socialButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Opcion no disponible aun');
+  });
+});
 
   
