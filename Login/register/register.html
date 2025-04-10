@@ -11,11 +11,19 @@
 
     <div class="container">
 
-        <h2>Regístrarse</h2>
+        <h2>Crear una cuenta</h2>
 
         <form id="registerForm">
-            <input type="text" name="nombre" placeholder="Nombre de usuario" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <div class="name-fields">
+            <div class="name-field">
+                 <input type="text" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="name-field">
+               <input type="text" name="nombre" placeholder="Apellido" required>
+           </div>
+            </div>
+        
+            <input type="email" name="email" placeholder="Correo electrónico o número de celular" required>
             <input type="password" name="password" placeholder="Contraseña" required>
             <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" required>
 
