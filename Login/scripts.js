@@ -40,8 +40,9 @@ if (window.location.pathname.includes('login.html')) {
       alert('No existen usuarios');
       return;
     }
+    //ACA CAMBIO EL ALERTA POR NUEVA PAGINA
     if (storedUser.email === email && storedUser.password === password) {
-      alert(`Bienvenido, ${storedUser.nombre}`);
+      window.location.href = "../resultado.html";
     } else{
     alert('Usuario o contraseña incorrectos');
     }
